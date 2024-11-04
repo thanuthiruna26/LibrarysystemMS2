@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management - Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="admin.html">Add Book</a></li>
+            <li><a href="inventery_report.html">Book Inventory</a></li>
+            <li><a href="member_report.html"> Members report</a></li>
+            <li><a href="request.html">Request</a></li>
+            <li><a href="return.html">Retuen Books</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+
+        <section id="book-form">
+            <h2>Add New Book</h2>
+            <form id="addBookForm">
+                <div class="form-group">
+                    <input type="text" id="bookName" placeholder="Book Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="isbn" placeholder="ISBN Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="publisher" placeholder="Publisher" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="copies" placeholder="Number of Copies" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="coverUrl" placeholder="Cover Page URL" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="genre" placeholder="Genre" required>
+                </div>
+                <button type="submit"  id="addBook" >Add Book</button>
+            </form>
+        </section>
+
+        <section id="book-list">
+            <h2>Book Inventory</h2>
+            <table id="booksTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>ISBN</th>
+                        <th>Publisher</th>
+                        <th>Copies</th>
+                        <th>Genre</th>
+                        <th>Cover</th>
+                        <th >Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book records will be added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="member-management">
+            <h2>Manage Members</h2>
+            <form id="addMemberForm">
+                <div class="form-group">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="nic" placeholder="NIC Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" id="addmember">Add Member</button>
+            </form>
+
+            <table id="membersTable">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>NIC</th>
+                        <th>Registered Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Member records will be added here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+   <script src="admin.js"></script>
+</body>
+
+</html>
